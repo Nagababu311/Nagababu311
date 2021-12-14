@@ -1,0 +1,25 @@
+Class Employee
+def Initialize(id,name,payamount,role,hours)
+@i=id
+@n=name
+@r=role
+@h=hours
+@pa=payamount
+@@sal=@pa*@h
+puts"employee salary is#{@@sal}"
+puts"employee id is#{@i}"
+puts"employee name is #{@n}"
+end
+def self.payslip(pf,insurance)
+@p=pf
+@in=insurance
+puts"#{@@sal}"
+@salary=@@sal-(@p+@in)
+puts"employee total salary is #{@salary}"
+end
+end
+class Manager<Employee
+def self.payslip(pf,insurance)
+super
+end
+end
